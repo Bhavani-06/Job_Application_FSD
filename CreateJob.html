@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Job Data</title>
+    <link rel="stylesheet" href="CreateJob.css">
+
+</head>
+<body>
+    <h1>Enter Job Data</h1>
+    <form onsubmit="return validateJobForm()">
+        <label for="title">Title *</label>
+        <input type="text" id="title" required>
+
+        <label for="type">Type *</label>
+        <select id="type" required>
+            <option value="">Select Type</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Contract">Contract</option>
+        </select>
+
+        <label for="department">Department *</label>
+        <select id="department" required>
+            <option value="">Select Department</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+        </select>
+
+        <label for="country">Country *</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select>
+
+        <label for="description">Description *</label>
+        <textarea id="description" required></textarea>
+
+        <label for="opening_date">Opening Date *</label>
+        <input type="date" id="opening_date" value="" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="CreateJob.js"></script>
+</body>
+</html>
