@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Jobs</title>
+    <link rel="stylesheet" href="ApplyJob.css">
+</head>
+<body>
+    <h1>Apply for Jobs</h1>
+    <form onsubmit="return validateApplyForm()">
+        <label for="first_name">First Name *</label>
+        <input type="text" id="first_name" required>
+
+        <label for="last_name">Last Name *</label>
+        <input type="text" id="last_name" required>
+
+        <label for="email">Email *</label>
+        <input type="text" id="email" required>
+
+        <label for="phone">Phone *</label>
+        <input type="text" id="phone" required>
+
+        <label for="address">Address *</label>
+        <input type="text" id="address" required>
+
+        <label for="city">City *</label>
+        <input type="text" id="city" required>
+
+        <label for="state">State *</label>
+        <input type="text" id="state" required>
+
+        <label for="zip">Zip Code *</label>
+        <input type="text" id="zip" required>
+
+        <label for="country">Country *</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select>
+
+        <label for="edu_level">Education Level *</label>
+        <select id="edu_level" required>
+            <option value="">Select Level</option>
+            <option value="High School">High School</option>
+            <option value="Bachelor">Bachelor</option>
+            <option value="Master">Master</option>
+        </select>
+
+        <label for="edu_type">Education Type *</label>
+        <select id="edu_type" required>
+            <option value="">Select Type</option>
+            <option value="Online">Online</option>
+            <option value="In-Person">In-Person</option>
+        </select>
+
+        <label for="resume">Resume *</label>
+        <input type="file" id="resume" required>
+
+        <label for="cover_letter">Cover Letter</label>
+        <textarea id="cover_letter"></textarea>
+
+        <label for="employed">Are you currently employed?</label>
+        <input type="checkbox" id="employed" onclick="toggleEmployerFields()">
+
+        <div id="employer_fields" style="display:none;">
+            <label for="current_employer">Current Employer</label>
+            <input type="text" id="current_employer">
+
+            <label for="years_of_exp">Years of Experience</label>
+            <input type="number" id="years_of_exp">
+        </div>
+
+        <label for="job_openings">Jobs You Want to Apply *</label>
+        <select id="job_openings" multiple required>
+            <option value="Job 1">Software Developer</option>
+            <option value="Job 2">HR Manager</option>
+            <option value="Job 3">Finanace Manager</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="ApplyJob.js"></script>
+</body>
+</html>
